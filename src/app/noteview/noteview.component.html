@@ -1,0 +1,21 @@
+<mat-card class="noteview">
+	<form (ngSubmit)="saveNote()" [formGroup]="editForm">
+		<mat-card-header>
+			<mat-card-title>
+				<input matInput="" placeholder="title" type="text" formControlName="title" >
+			</mat-card-title>
+			<mat-card-subtitle>
+				<input matInput="" type="text" placeholder="subtitle" value="note.subtitle" formControlName="subtitle" >
+			</mat-card-subtitle>
+		</mat-card-header>
+		<mat-card-content>
+			<mat-form-field>
+				<textarea matInput formControlName="content" placeholder="content" rows="10"></textarea>
+			</mat-form-field>
+		</mat-card-content>
+		<mat-card-actions>
+			<button mat-flat-button type="submit" color="primary">Save</button>
+			<button mat-stroked-button [routerLink]="['/main']" color="warn">Cancel</button>
+		</mat-card-actions>
+	</form>
+</mat-card>

@@ -1,0 +1,18 @@
+<div class="notes-container">
+  <div *ngFor="let n of notesArray">
+    <app-note-preview
+      (noteDeleted)="deleteNote($event)"
+      [note]="n"
+    ></app-note-preview>
+  </div>
+
+  <!-- <mat-grid-list cols="3"> -->
+  <!--   <mat-grid-tile *ngFor="let n of notesArray"> -->
+  <!--     <app-note-preview -->
+  <!--       (noteDeleted)="deleteNote($event)" -->
+  <!--       [note]="n" -->
+  <!--     ></app-note-preview> -->
+  <!--   </mat-grid-tile> -->
+  <!-- </mat-grid-list> -->
+
+</div>
